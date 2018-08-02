@@ -66,8 +66,6 @@ main(int ac, char *av[])
 
 		case 't':	/* table number */
 			ipfw2_table_no = atoi(optarg);
-			if (ipfw2_table_no > 127 || ipfw2_table_no < 0)
-				errx(EX_USAGE, "table number can be from 0 to 127");
 			break;
 
 		case 's':	/* from */
