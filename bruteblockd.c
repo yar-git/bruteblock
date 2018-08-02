@@ -65,11 +65,11 @@ main(int ac, char *av[])
 		switch (ch) {
 
 		case 't':	/* table number */
-			ipfw2_table_no = atoi(optarg);
+			ipfw2_table_no = strtol(optarg, NULL, 10);
 			break;
 
 		case 's':	/* from */
-			sleep_time = atoi(optarg);
+			sleep_time = strtol(optarg, NULL, 10);
 			break;
 		case 'f':
 			daemonize = 0;
