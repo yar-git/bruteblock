@@ -26,8 +26,6 @@ hosts		hosts_table[MAXHOSTS];
 
 int		table_handler(int ac, char *av[]);
 
-int		process_record(char *host, unsigned int reset_ip);
-
 int		max_count = -1;
 int		within_time = -1;
 int		ipfw2_table_no = -1;
