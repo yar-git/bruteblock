@@ -1,12 +1,12 @@
 LOCALBASE?=/usr/local
-CFLAGS+=-s -Wall -I${LOCALBASE}/include
+CFLAGS+=-std=c11 -Wall -Wextra -pedantic -I${LOCALBASE}/include
 LDFLAGS+=-s
 EXTRA_LIBS=-L${LOCALBASE}/lib -Liniparse -lpcre -liniparser
-CC?=gcc
+CC?=clang
 AR?=ar
 
 BRUTEBLOCK_OBJS=bruteblock.o utils.o ipfw2.o
-BRUTEBLOCKD_OBJS=bruteblockd.o utils.o ipfw2.o pidfile.o
+BRUTEBLOCKD_OBJS=bruteblockd.o bruteblockd_global.o utils.o ipfw2.o pidfile.o
 INIPARSE_SRC=iniparse/dictionary.c iniparse/iniparser.c iniparse/strlib.c
 INIPARSE_H=iniparse/dictionary.h iniparse/iniparser.h iniparse/strlib.h
 
